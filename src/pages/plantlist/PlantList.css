@@ -1,0 +1,184 @@
+
+.maindiv 
+{
+background-color: #2e7d32; display: flex; 
+align-items: center; justify-content: space-between;
+padding: 10px 20px; color: #ffffff;
+font-family: sans-serif;
+}
+
+.leftdiv
+{
+    display: flex; 
+    align-items: center; 
+    gap: 10px;
+
+}
+
+
+
+.middledivh1
+{
+    margin: 0; 
+    font-size: 1.5rem; 
+    letter-spacing: 1px;
+}
+
+.rightdiv{
+
+    cursor: pointer; 
+    position: relative;
+}
+
+.img{
+    border-radius: 50%
+}
+
+.leftdivspan
+{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.plantcarddiv
+{
+    font-family: Arial, sans-serif;
+     max-width: 300px;
+      margin: 20px auto; 
+      padding: 20px; 
+      border: 1px solid #e0e0e0; 
+      border-radius: 12px; 
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05); 
+      text-align: center; background-color: #ffffff;
+}
+.plantcarddivspan
+{
+    display: block; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; color: #666666; margin-bottom: 6px; font-weight: 600;
+}
+.plantcarddivh3{
+    font-size: 1.4rem; color: #1a1a1a;
+     margin: 0 0 16px 0; font-weight: 700;
+}
+.plantcardinternaldiv
+{
+    width: 100%; 
+    height: 220px;
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    margin-bottom: 16px;
+}
+.internalimg
+{
+    
+    max-width: 100%;
+    max-height: 100%;
+     object-fit: cover;
+}
+
+.div3
+{
+font-size: 1.3rem; 
+color: #2e7d32;
+font-weight: 700;
+margin-bottom: 16px;
+}
+
+.divcardbtn
+{
+    width: 100%;
+    background-color: #2e7d32;
+    color: #ffffff; 
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: 600; 
+    border-radius: 6px;
+    cursor: pointer; 
+    transition: background-color 0.2s ease;
+}
+
+.plants-grid {
+  display: flex;
+  flex-wrap: wrap;       /* Allows plants to move to the next line */
+  gap: 20px;             /* Space between the cards */
+}
+
+.plantcarddiv {
+  /* Calculate width for 3 items minus the gaps */
+  flex: 0 0 calc(33.333% - 20px); 
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  padding: 15px;
+  text-align: center;
+}
+
+/* Mobile Responsive: Show 1 plant per row on small screens */
+@media (max-width: 768px) {
+  .plantcarddiv {
+    flex: 0 0 100%;
+  }
+}
+
+/* Header with Green Background */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  background-color: #2e7d32; /* Deep Green */
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.company-name {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.cart-btn {
+  background: white;
+  color: #2e7d32;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* 3 Items Per Row Grid */
+.plants-grid {
+  display: flex;
+  flex-wrap: wrap; /* Allows breaking into new rows */
+  gap: 20px;       /* Horizontal and vertical spacing */
+}
+
+.plantcarddiv {
+  /* Calculate width for 3 items: (100% / 3) minus gap adjustments */
+  flex: 0 0 calc(33.333% - 14px); 
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  background: #fff;
+}
+
+/* Ensure images don't break the layout */
+.internalimg {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+
+
+.button-disabled {
+  background-color: #cccccc; /* Greys out the background */
+       
+}

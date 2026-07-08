@@ -1,0 +1,65 @@
+
+body,html{
+height: 100%;
+width: 100%;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+}
+
+.smalldiv {
+  width: 40%;
+  box-sizing: border-box;
+  color:white
+}
+
+.bigdiv {
+  width: 60%;
+  box-sizing: border-box;
+  color:white
+}
+/* .table
+{
+  background-color: lightblue;
+    height: 500px;
+    width: 100%;
+} */
+
+/* .smalltd
+{
+    width:45%;
+    
+    color:white
+} */
+
+/* .bigtd{
+    width: 75%;
+   color:black
+    
+    
+} */
+
+.span
+{
+    color:white
+}
+
+.btn
+{
+    height: 10%;
+    width: 10%;
+    color:white
+}
+
+.bottombutton
+{
+  background-color: green;
+  color:white;
+  height: 50px;
+  width: 150px;
+  margin:10px;
+  cursor: pointer;
+
+}

@@ -1,0 +1,60 @@
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  background-color: #2e7d32; /* Deep Green */
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.company-name {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: left;
+  color:white;
+ 
+}
+.plantspara
+{
+    color:white;
+    text-align: center;
+    margin-left: 1%;
+}
+
+.navbar-brand{
+display: flex !important;       /* Forces the layout container to use Flexbox */
+  flex-direction: row !important; /* Forces items to align horizontally side-by-side */
+  align-items: center;            /* Centers the logo and text vertically relative to each other */
+  gap: 15px;   
+}     
+
+
+/* This is the container holding both the image and the text */
+.header-logo-box {
+  display: flex;
+  flex-direction: row;  /* Forces the logo and text to sit horizontally */
+  align-items: center;  /* Centers the logo and text vertically relative to each other */
+  gap: 15px;            /* Creates a clean, attractive space between the logo and text */
+}
+
+/* Optional: Ensures the heading text removes default margins that can distort spacing */
+.company-name {
+  margin: 0;
+  padding: 0;
+  white-space: nowrap; /* Keeps the entire name on a single line */
+}
+
+/* Optional: Ensures your logo dimensions stay clean and contained */
+.logo {
+  height: 50px;        /* Adjust this value based on how large you want your logo */
+  width: auto;
+  display: block;
+}
+.plantspara
+{
+    text-align: center;
+    margin-left:-10%;
+}
