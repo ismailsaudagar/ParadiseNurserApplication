@@ -48,16 +48,16 @@ const loadCart = () =>
 
   return (
     <div className="page-wrapper">
-      {/* HEADER SECTION */}
+   
      <Header/>
 
-      {/* PLANTS CONTENT */}
+   
       <div className="garden-container">
         {Object.entries(groupedPlants).map(([category, plantsInCategory]) => (
           <div key={category} className="category-section">
             <h2 className="category-title">{category}</h2>
             
-            {/* GRID FOR 3 ITEMS PER ROW */}
+          
             <div className="plants-grid">
               {plantsInCategory.map((plant) => (
                

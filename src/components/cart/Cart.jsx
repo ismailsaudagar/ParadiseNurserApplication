@@ -11,7 +11,7 @@ const Cart = () => {
 
   
 
-  // 1. Initialize state immediately using a fallback empty list
+ 
   const [plants, setPlants] = React.useState(() => {
     let saveddata = sessionStorage.getItem("cartplants");
     if(saveddata)
@@ -46,7 +46,7 @@ const Cart = () => {
     }
 
   
-  2. //Synchronize to sessionStorage automatically ONLY after state changes successfully
+  
   useEffect(() => {
 
     sessionStorage.setItem("cartplants", JSON.stringify(plants));
