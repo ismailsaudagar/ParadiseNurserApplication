@@ -1,0 +1,29 @@
+/* src/components/Navbar.css */
+.navbar {
+  display: flex;
+  background-color: #ffffff; 
+  padding: 10px 20px;
+  border-bottom: 1px solid #e0e0e0; 
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 15px; 
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #0000ee; 
+  text-decoration: underline; 
+  font-size: 13px; 
+}
+
+.nav-links a:visited {
+  color: #551a8b; 
+}
+
+.nav-links a:hover {
+  color: #ff0000; 
+}

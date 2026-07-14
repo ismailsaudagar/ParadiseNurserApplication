@@ -1,31 +1,31 @@
 import React  from "react";
-import './MainPage.css';
-import PlantList from "../PlantList/PlantList";
+import './App.css';
+import productList from '../productlist/ProductList'
 import { useNavigate } from "react-router-dom";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import bgImage from '../../images/nurserybackgroundimage.jpg';
+import bgImage from '/images/nurserybackgroundimage.jpg';
 
-const MainPage =  () =>
+const App =  () =>
 {
     const navigate = useNavigate();
-    
+    const baseUrl = import.meta.env.BASE_URL;
     const loadPlants = () =>
     {
-        navigate('/PlantList')
+        navigate('/ProductList')
     }
     return (
 
-<body style={{ 
-  backgroundImage: 'url("/src/images/nurserybackgroundimage.jpg")',
+// {/* <body style={{ 
+//   backgroundImage: 'url("'+ baseUrl + '"/images/nurserybackgroundimage.jpg")',
   
-  backgroundSize: 'cover',
-  backgroundPosition: 'center',
-  minHeight: '100vh' 
+//   backgroundSize: 'cover',
+//   backgroundPosition: 'center',
+//   minHeight: '100vh' 
  
   
-}}>
+// }}> */}
 
-<div style={{ minHeight: '100vh', background: 'linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url("/images/nurserybackgroundimage.jpg") center/cover no-repeat' }} className="container">
+<div className="maindiv">
 <div className="smalldiv">
             <h1 style ={{color:"white"}}> Welcome To <br/>
         <br></br>
@@ -47,8 +47,8 @@ const MainPage =  () =>
      
         </div>
         </div>
-      </body>
+      // {/* </body> */}
     )
 }
 
-export default MainPage
+export default App

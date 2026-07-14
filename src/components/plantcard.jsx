@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import  '../pages/plantlist/PlantList';
+import  '../pages/productlist/ProductList';
 import { CartContext } from "../context/CartContext";
 import React from "react";
-import '../pages/plantlist/PlantList.css';
+import '../pages/productlist/ProductList.css';
+import Navbar from "./navbar/NavBar";
 
 const Plantcard = ({ plant }) => {
   const { incrementCart } = React.useContext(CartContext);
@@ -60,6 +61,7 @@ const Plantcard = ({ plant }) => {
   };
 
   return (
+   
     <div className="plantcarddiv">
       <span className="plantcarddivspan">{plant.Benefit}</span>
       <h3 className="plantcarddivh3">{plant.Name}</h3>
