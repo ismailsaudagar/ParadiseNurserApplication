@@ -7,12 +7,26 @@ import './CartSlice.css';
 const CartSlice = ({ plant, plants, setPlants }) => {
   const { incrementCart, decrementCart } = useContext(CartContext);
 
-  const increaseCount = (plantid) => {
-    // Updates the shared array state in the parent
-    setPlants((prevplants) =>
+  const addItem = (plantid) => {
+   
+    updateQuantity(plantid,'add');
+    incrementCart(); 
+  };
+
+
+  const updateQuantity = (plantid , from = '')=>
+  {
+ setPlants((prevplants) =>
       prevplants.map((p) => {
         if (p.id === plantid) {
-          let newQuantity = p.Quantity + 1;
+          let newQuantity =0;
+          if(from === 'add'){
+            newQuantity = p.Quantity + 1;
+          }
+          if(from ==="remove")
+          {
+            newQuantity = p.Quantity - 1;
+          }
           return {
             ...p,
             Quantity: newQuantity,
@@ -22,33 +36,37 @@ const CartSlice = ({ plant, plants, setPlants }) => {
         return p;
       })
     );
-    incrementCart(); 
-  };
-
-  const decreaseCount = (plantid) => {
+  }
+  const removeItem = (plantid) => {
     const targetPlant = plants.find((p) => p.id === plantid);
     if (!targetPlant || targetPlant.Quantity <= 0) return;
-
     let newQuantity = targetPlant.Quantity - 1;
- 
-    if (newQuantity === 0) {
+     if (newQuantity === 0) {
       deleteplant(plantid, targetPlant.Quantity);
-    } else {
-      setPlants((prevplants) =>
-        prevplants.map((p) => {
-          if (p.id === plantid) {
-            return {
-              ...p,
-              Quantity: newQuantity,
-              ItemTotal: newQuantity * p.Price,
-            };
-          }
-          return p;
-        })
-      );
+     }
+     else{
+    updateQuantity(plantid,'remove');
+     }
+    
+ 
+    // if (newQuantity === 0) {
+    //   deleteplant(plantid, targetPlant.Quantity);
+    // } else {
+    //   setPlants((prevplants) =>
+    //     prevplants.map((p) => {
+    //       if (p.id === plantid) {
+    //         return {
+    //           ...p,
+    //           Quantity: newQuantity,
+    //           ItemTotal: newQuantity * p.Price,
+    //         };
+    //       }
+    //       return p;
+    //     })
+    //   );
       decrementCart(1); 
     }
-  };
+ // };
 
   const deleteplant = (id, quantity) => {
     decrementCart(quantity);
@@ -70,9 +88,9 @@ const CartSlice = ({ plant, plants, setPlants }) => {
       </div>
 
       <div className="cart-item-quantity">
-        <button className="qty-btn minus-btn" onClick={() => decreaseCount(plant.id)}>-</button>
+        <button className="qty-btn minus-btn" onClick={() => removeItem(plant.id)}>-</button>
         <span className="qty-number">{plant.Quantity}</span>
-        <button className="qty-btn plus-btn" onClick={() => increaseCount(plant.id)}>+</button>
+        <button className="qty-btn plus-btn" onClick={() => addItem(plant.id)}>+</button>
       </div>
 
       <div className="cart-item-action-block">
