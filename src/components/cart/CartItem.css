@@ -1,0 +1,125 @@
+/* Container styling */
+.cart-container {
+  max-width: 800px;
+  margin: 0 ;
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+/* Base horizontal row wrapper */
+.cart-item-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* Column 1: Image container */
+.cart-item-left {
+  flex: 0 0 100px; /* Fixed width for the image area */
+}
+
+.cart-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Column 2: Product details */
+.cart-item-details {
+  flex: 1; /* Takes up remaining available space */
+  padding-left: 20px;
+}
+
+.cart-product-name {
+  margin: 0 0 5px 0;
+  font-size: 1.1rem;
+}
+
+.cart-product-price {
+  margin: 0;
+  color: #666;
+}
+
+/* Column 3: Quantity layout */
+.cart-item-quantity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 0 0 120px;
+  justify-content: center;
+}
+
+.qty-btn {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #000; /* 👈 Forces the text color to stay black in Dark Mode */
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+
+.qty-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.qty-number {
+  font-weight: bold;
+  min-width: 20px;
+  text-align: center;
+}
+
+/* Column 4: Subtotal & Delete layout */
+.cart-item-total {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 0 0 150px;
+  justify-content: flex-end;
+}
+
+.subtotal-amount {
+  margin-right:43%;
+  margin-top:2%;
+  margin-bottom:1%;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.delete-btn {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom:2%;
+}
+
+.delete-btn:hover {
+  background-color: #e60000;
+}
+
+.lblcarttotal{
+  
+  text-align: center;
+  color:white;
+  font-weight: bold;
+  margin-top: 2%;
+}
+
+.bottombutton
+{
+  background-color: green;
+  color:white;
+  height: 50px;
+  width: 200px;
+  margin:10px;
+  cursor: pointer;
+
+}
