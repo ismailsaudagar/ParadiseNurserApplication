@@ -6,7 +6,7 @@ import Checkout from './pages/checkout/checkout';
 import './App1.css';
 import CartItem from './components/cart/CartItem';
 import { CartProvider } from './context/CartContext';
-import About from './pages/about/About';
+import AboutUs from './pages/about/AboutUs';
 
 
 
@@ -19,7 +19,7 @@ function App1() {
           <Route path="/ProductList" element={<ProductList />} />
           <Route path="/CartItem" element={<CartItem />} />
           <Route path="/Checkout" element={<Checkout />} />
-          <Route path="/About" element={<About />} />
+          <Route path="/about" element={<AboutUs/>} />
           {/* Fallback route to catch spelling mistakes */}
           <Route path="*" element={<div style={{ padding: '20px' }}>404 - Page Not Found</div>} />
         </Routes>

@@ -1,15 +1,15 @@
 
 import React from "react";
-import './About.css';
+import './AboutUs.css';
 import Navbar from "../../components/navbar/NavBar";
 
-const About = () =>
+const AboutUs = () =>
 {
 
 
 return(
 <>
-<div className="body">
+<div className="about-us-container">
      <Navbar />
 <p>
     
@@ -19,9 +19,12 @@ return(
                 You can buy the plants on reasonable prices and I am sure 
                 you peoples will be happy.
 </p>
+<p>
+     The aim of the company is to provide digital solution to plant sales in the world
+</p>
 </div>
 </>
 )
 }
 
-export default About
+export default AboutUs
