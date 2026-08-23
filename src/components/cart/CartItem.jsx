@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import Header from "../Header/Header.jsx";
+import Header from "../header/Header.jsx";
 import { CartContext } from "../../context/CartContext.jsx";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../navbar/NavBar.jsx";

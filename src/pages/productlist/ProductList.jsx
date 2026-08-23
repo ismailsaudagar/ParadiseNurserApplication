@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Plantcard from "../../components/plantcard";
-import Header from "../../components/Header/Header";
+import Header from "../../components/header/Header";
 import { CartContext } from "../../context/CartContext";
 import { useContext } from "react";
 import Navbar from "../../components/navbar/NavBar";
